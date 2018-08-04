@@ -1,0 +1,21 @@
+CREATE TABLE [prodcopystg].[CampaignMember]
+(
+[Id] [nvarchar] (18) COLLATE SQL_Latin1_General_CP1_CI_AS NOT NULL,
+[IsDeleted] [bit] NULL,
+[CreatedDate] [datetime] NULL,
+[CreatedById] [nvarchar] (18) COLLATE SQL_Latin1_General_CP1_CI_AS NULL,
+[LastModifiedDate] [datetime] NULL,
+[LastModifiedById] [nvarchar] (18) COLLATE SQL_Latin1_General_CP1_CI_AS NULL,
+[SystemModstamp] [datetime] NULL,
+[Status] [nvarchar] (40) COLLATE SQL_Latin1_General_CP1_CI_AS NULL,
+[CampaignId] [nvarchar] (18) COLLATE SQL_Latin1_General_CP1_CI_AS NULL,
+[LeadId] [nvarchar] (18) COLLATE SQL_Latin1_General_CP1_CI_AS NULL,
+[ContactId] [nvarchar] (18) COLLATE SQL_Latin1_General_CP1_CI_AS NULL,
+[HasResponded] [bit] NULL,
+[FirstRespondedDate] [date] NULL,
+[Name] [nvarchar] (255) COLLATE SQL_Latin1_General_CP1_CI_AS NULL,
+[copyloaddate] [datetime] NULL CONSTRAINT [DF__CampaignM__copyl__73BA3083] DEFAULT (getdate())
+)
+GO
+ALTER TABLE [prodcopystg].[CampaignMember] ADD CONSTRAINT [PK__Campaign__3214EC072461325F] PRIMARY KEY CLUSTERED  ([Id])
+GO
